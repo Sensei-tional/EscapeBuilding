@@ -2,6 +2,9 @@ Binaries
 DerivedDataCache
 Intermediate
 Saved
+.cpp
+.h
 *.VC.db
 *.suo
 *.ipch
+*.opendb
