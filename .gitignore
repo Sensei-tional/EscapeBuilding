@@ -4,9 +4,6 @@ Intermediate
 Saved
 .vs
 .vscode
-.cpp
-.h
-Source
 *.VC.db
 *.suo
 *.ipch
