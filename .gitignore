@@ -2,6 +2,8 @@ Binaries
 DerivedDataCache
 Intermediate
 Saved
+.vs
+.vscode
 .cpp
 .h
 *.VC.db
@@ -9,7 +11,6 @@ Saved
 *.ipch
 *.opendb
 *.sln
-EscapeBuildling.sln
 *.db-shm
 *.db-wal
 *.sln
