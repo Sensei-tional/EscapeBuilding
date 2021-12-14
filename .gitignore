@@ -8,3 +8,10 @@ Saved
 *.suo
 *.ipch
 *.opendb
+*.sln
+EscapeBuildling.sln
+*.db-shm
+*.db-wal
+*.sln
+*.db-wal
+*.db-shm
