@@ -20,7 +20,9 @@ void UTest2::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
+	{
 	
+	}
 }
 
 
