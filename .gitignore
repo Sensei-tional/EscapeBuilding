@@ -6,6 +6,7 @@ Saved
 .vscode
 .cpp
 .h
+Source
 *.VC.db
 *.suo
 *.ipch
