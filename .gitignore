@@ -17,3 +17,4 @@ Source
 *.sln
 *.db-wal
 *.db-shm
+*.code-workspace
