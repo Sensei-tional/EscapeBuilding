@@ -2,8 +2,9 @@
 
 
 #include "Grabber.h"
-#include "GameFramework/PlayerController.h"
+#include "DrawDebugHelpers.h"
 #include "Engine/World.h"
+#include "GameFramework/PlayerController.h"
 
 #define OUT
 
@@ -38,6 +39,21 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 	FRotator PlayerRotation = GetOwner()->GetActorRotation();
 	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(OUT PlayerLocation, OUT PlayerRotation);
 	
-	UE_LOG(LogTemp, Warning, TEXT("The %s is located at: %s , rotation is: %s"),*GetOwner()->GetName(), *PlayerLocation.ToString(), *PlayerRotation.ToString());
+	UE_LOG(LogTemp, Warning, TEXT("The %s is located at: %s , rotation is: %s"),
+	*GetOwner()->GetName(), *PlayerLocation.ToString(), *PlayerRotation.ToString()
+	);
+
+	// Draw a debug line
+	FVector LineTraceEnd = PlayerLocation + PlayerRotation.Vector() * Reach;
+	DrawDebugLine(
+		GetWorld(),
+		PlayerLocation,
+		LineTraceEnd,
+		FColor(155, 0, 255),
+		false,
+		0.f,
+		0,
+		5.f
+	);
 }
 
