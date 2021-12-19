@@ -31,7 +31,10 @@ private:
 	// Distance of line for debug
 	float Reach = 200.f;
 
+	UPROPERTY()
 	UPhysicsHandleComponent *PhysicsHandle = nullptr;
+
+	UPROPERTY()
 	UInputComponent *InputHandle = nullptr;
 
 	void Grab();
@@ -39,4 +42,6 @@ private:
 	void FindPhysicsHandle();
 	void FindInputHandle();
 	FHitResult GetFirstPhysicsBody() const;
+	FVector GetReach() const;
+	FVector GetPlayerLocation() const;
 };
